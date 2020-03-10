@@ -8,33 +8,17 @@ import {
 } from "@ant-design/icons";
 import React, { useState } from "react";
 import Link from "next/link";
+import SiderLayout from "./SiderLayout";
+// import HeaderLayout from "./HeaderLayout";
 const { Header, Sider, Content } = Layout;
 
-function SliderDemo({ children }) {
+function AdminLayout({ children }) {
   const [collapsedState, setCollapsedState] = useState(false);
 
   return (
     <>
       <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsedState}>
-          <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="1">
-              <UserOutlined />
-              <Link href="'../pages/user/userPage1'">
-                <a>nav 1</a>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <VideoCameraOutlined />
-              <span>nav 2</span>
-            </Menu.Item>
-            <Menu.Item key="3">
-              <UploadOutlined />
-              <span>nav 3</span>
-            </Menu.Item>
-          </Menu>
-        </Sider>
+        <SiderLayout trigger={null} collapsible collapsed={collapsedState} />
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }}>
             {React.createElement(
@@ -47,7 +31,7 @@ function SliderDemo({ children }) {
               }
             )}
           </Header>
-          <Breadcrumb style={{ margin: "16px 0 0 16px" }}>
+          <Breadcrumb style={{ margin: "20px 0 0 20px" }}>
             <Breadcrumb.Item>User</Breadcrumb.Item>
             <Breadcrumb.Item>Bill</Breadcrumb.Item>
           </Breadcrumb>
@@ -67,4 +51,4 @@ function SliderDemo({ children }) {
   );
 }
 
-export default SliderDemo;
+export default AdminLayout;
