@@ -2,8 +2,9 @@ import BreadcrumbItem from "./BreadcrumbItem";
 function BreadcrumbsList(props) {
   return (
     <>
-      {/* {props.breadcrumbs.map(breadcrumb => {
-        return <BreadcrumbItem key={breadcrumb.id} breadcrumb={breadcrumb} />;
+      {/* <BreadcrumbItem /> */}
+      {/* {props.breadcrumbs.map((breadcrumb, i) => {
+        return <BreadcrumbItem key={i} breadcrumb={breadcrumb} />;
       })} */}
     </>
   );

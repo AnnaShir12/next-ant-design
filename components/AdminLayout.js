@@ -10,10 +10,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BreadcrumbsList from "./BreadcrumbsList";
 const { Header, Sider, Content } = Layout;
-// const breadcrumbs = [
-//   { href: "/", name: "Home" },
-//   { href: "/about", name: "About" }
-// ];
 
 function AdminLayout({ breadcrumbs, children }) {
   const [collapsedState, setCollapsedState] = useState(false);
