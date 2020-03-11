@@ -8,12 +8,12 @@ function BreadcrumbItem({ breadcrumb }) {
         <Link href="/">
           <a>Home</a>
         </Link>
-      </Breadcrumb.Item> */}
+      </Breadcrumb.Item>
       <Breadcrumb.Item>
         <Link href={breadcrumb.href}>
           <a>{breadcrumb.name}</a>
         </Link>
-      </Breadcrumb.Item>
+      </Breadcrumb.Item> */}
     </>
   );
 }

@@ -1,6 +1,6 @@
 import AdminLayout from "../components/AdminLayout";
 const breadcrumbs = [
-  { href: "/", name: "Home" },
+  // { href: "/", name: "Home" },
   { href: "/about", name: "About" }
 ];
 

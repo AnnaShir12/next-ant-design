@@ -1,11 +1,19 @@
-import BreadcrumbItem from "./BreadcrumbItem";
+// import BreadcrumbItem from "./BreadcrumbItem";
+import Link from "next/link";
+import { Breadcrumb } from "antd";
 function BreadcrumbsList(props) {
   return (
     <>
-      {/* <BreadcrumbItem /> */}
-      {/* {props.breadcrumbs.map((breadcrumb, i) => {
-        return <BreadcrumbItem key={i} breadcrumb={breadcrumb} />;
-      })} */}
+      <Breadcrumb.Item>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </Breadcrumb.Item>
+      <Breadcrumb.Item>
+        {props.breadcrumbs.map(breadcrumb => {
+          return <span>{breadcrumb.name}</span>;
+        })}
+      </Breadcrumb.Item>
     </>
   );
 }
